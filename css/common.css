@@ -1,0 +1,118 @@
+body {
+    background-color: rgb(248, 248, 253);
+    color: #444;
+    user-select: none;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    padding-top: 80px;
+}
+
+#header {
+    background-color: white;
+    border-bottom: 1px solid rgb(199, 199, 199);
+    height: 80px;
+    color: rgb(70, 70, 70);
+    line-height: 80px;
+    position: fixed;
+    width: 100%;
+    top: 0;
+    left: 0;
+    z-index: 100;
+}
+
+#frame {
+    transition: filter 0.2s ease;
+    -webkit-transition: filter 0.2s ease;
+    -moz-transition: filter 0.2s ease;
+    -o-transition: filter 0.2s ease;
+}
+
+#logo {
+    font-family: "Poiret One", sans-serif;
+    font-size: 37px;
+    float: left;
+    letter-spacing: 1px;
+}
+#logo span {
+    font-size: 50px;
+}
+
+#user-info {
+    font-size: 17px;
+    color: darkslategray;
+    float: right;
+    cursor: pointer;
+}
+#user-info span {
+    height: 100%;
+    display: inline-block;
+}
+
+.image-container {
+    background-color: white;
+    border: 1px solid gainsboro;
+    max-width: 100%;
+    width: 800px;
+    margin: 80px auto;
+    box-shadow: 0 0 3px gainsboro;
+}
+.image-header {
+    padding: 15px;
+    border-bottom: 1px solid gainsboro;
+    display: flex;
+}
+.user-image {
+    height: 55px;
+    width: 55px;
+    display: inline-block;
+    border: 1px solid #949494;
+    box-shadow: 0 0 2px gainsboro;
+    border-radius: 50%;
+    overflow: hidden;
+}
+.user-image img {
+    height: calc(100% + 2px);
+    width: calc(100% + 2px);
+    margin: -1px 0 0 -1px;
+}
+.user-name {
+    font-family: "Century Gothic", sans-serif;
+    font-size: 16px;
+    color: #333;
+    vertical-align: middle;
+    display: inline-block;
+    line-height: 60px;
+    margin-left: 15px;
+}
+.image-content img {
+    width: 100%;
+    height: auto;
+}
+.image-controls {
+    padding: 20px;
+}
+.image-controls .image-like {
+    font-size: 25px;
+    margin-left: 15px;
+    color: darkslateblue;
+    display: inline-block;
+    cursor: pointer;
+}
+.image-controls .image-tags {
+    font-family: "Open Sans", sans-serif;
+    font-weight: 300;
+    color: #555;
+    letter-spacing: 1px;
+    font-size: 17px;
+    display: inline-block;
+    float: right;
+    line-height: 25px;
+}
+
+.blur {
+    filter: blur(3px);
+}
+.hidden {
+    opacity: 0;
+    z-index: -1 !important;
+}
