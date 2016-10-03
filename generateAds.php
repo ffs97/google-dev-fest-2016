@@ -1,6 +1,7 @@
 <?php
 
 $tags = explode("$", $_GET['tags']);
+$data = "{\"data\" : [";
 
 foreach ($tags as $tag) {
     if ($tag != "") {
@@ -9,6 +10,10 @@ foreach ($tags as $tag) {
         $url = $content->searchResult->item[0]->viewItemURL;
         $title = $content->searchResult->item[0]->title;
 
-        echo "<div class='image-ad'><a href='$url'><img alt='$title' title='$title' src=''></a></div>";
+//        echo "<div class='image-ad'><a href='$url'>$title</a></div>";
+        $data = $data . "{\"url\" : \"$url\", \"title\" : \"$title\"}, ";
     }
 }
+
+$data = substr($data, 0, -2) . "]}";
+echo $data;
